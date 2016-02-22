@@ -1,6 +1,11 @@
 package com.adms.batch.sales.data.partner.model;
 
+import java.text.ParseException;
 import java.util.Date;
+
+import org.apache.commons.lang3.StringUtils;
+
+import com.adms.utils.DateUtil;
 
 public class YesRecordMTIModel {
 
@@ -320,7 +325,7 @@ public class YesRecordMTIModel {
 	
 	private String subCode;
 	
-	public YesRecordMTIModel(String line) {
+	public YesRecordMTIModel(String line) throws Exception {
 		this.recordType = line.substring(0, 2).trim();
 		this.agencyId = line.substring(2, 4).trim();
 		this.locationCode = line.substring(4, 6).trim();
@@ -331,7 +336,22 @@ public class YesRecordMTIModel {
 		this.creditCardAccNo = line.substring(47, 63).trim();
 		this.creditCardExpiryDate = line.substring(63, 67);
 		this.bankAccNo = line.substring(67, 83).trim();
+		this.bankName = line.substring(84, 88).trim();
+		this.bankCode1 = line.substring(88, 93).trim();
+		this.bankCode2 = line.substring(93, 98).trim();
+		this.primaryInsuredTitile = line.substring(98, 119).trim();
+		this.primaryInsuredFirstName = line.substring(119, 159).trim();
+		this.primaryNameOnCard = line.substring(159, 199).trim();
+		this.primaryInsuredLastName = line.substring(199, 239).trim();
+		this.primaryInsuredDob = StringUtils.isBlank(line.substring(239, 247)) ? null : DateUtil.convStringToDate("ddMMyyyy", line.substring(239, 247).trim());
+		this.primaryInsuredGender = line.substring(247, 248).trim();
+		this.primaryInsuredOccupationCode = line.substring(248, 251).trim();
+		this.primaryIdCard = line.substring(251, 264).trim();
+		this.primaryNameChanged = line.substring(264, 267).trim();
+		this.primaryMaritalStatus = line.substring(267, 268).trim();
+		this.primaryIncome = line.substring(268, 270).trim();
 		
+	
 	}
 
 	public String getRecordType()
