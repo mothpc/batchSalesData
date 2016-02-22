@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileFormat fileType="EXCEL" locale="en-US">
+
+	<DataSet description="Test">
+
+		<DataSheet sheetIndex="0" displayGridlines="TRUE">
+
+			<DataCell row="1" column="A" dataType="TEXT" templateRow="1" templateColumn="A" defaultValue="This is static content"/>
+			<DataCell row="1" column="B" dataType="TEXT" templateRow="1" templateColumn="A" fieldName="CONTENT_1"/>
+
+			<DataCell row="3" column="A" dataType="TEXT" defaultValue="Field ID"/>
+			<DataCell row="3" column="B" dataType="TEXT" defaultValue="Field NAME"/>
+			<DataCell row="3" column="C" dataType="TEXT" defaultValue="Field UPDATE_TIME"/>
+			<DataCell row="3" column="D" dataType="TEXT" defaultValue="Field PREMIUM"/>
+
+			<DataRecord listSourceName="someDataList" beginRow="4" endRow="9999" skipWhenNull="FALSE">
+				<DataCell row="1" column="A" dataType="NUMBER" fieldName="ID" dataFormat="0" />
+				<DataCell row="1" column="B" dataType="TEXT" fieldName="NAME" />
+				<DataCell row="1" column="C" dataType="DATE" fieldName="UPDATE_TIME" dataFormat="dd/MM/yyyy" />
+				<DataCell row="1" column="D" dataType="NUMBER" fieldName="PREMIUM" dataFormat="#,##0.00" />
+			</DataRecord>
+
+			<ColumnWidth column="A" width="15000"/>
+			<ColumnWidth column="B" width="4000"/>
+			<ColumnWidth column="C" width="4000"/>
+			<ColumnWidth column="D" width="4000"/>
+
+		</DataSheet>
+
+	</DataSet>
+</FileFormat>

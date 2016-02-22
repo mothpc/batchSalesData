@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileFormat fileName="ADMS_Pending Pre UW 2014.xls" fileType="EXCEL" locale="en-US">
+	<DataSet description="ADMS_Pending Pre UW 2014">
+
+		<DataSheet sheetIndex="0">
+			<DataRecord listSourceName="uwRecords" beginRow="2" endRow="99999">
+				<DataCell row="1" column="A" dataType="DATE" dataFormat="yyyy-MM-dd" fieldName="appSubmitDate" />
+				<DataCell row="1" column="B" dataType="TEXT" autoTrim="TRUE" fieldName="xRef" />
+				<DataCell row="1" column="J" dataType="DATE" dataFormat="dd-MMM-yyyy" fieldName="uwSubmitDate" />
+				<DataCell row="1" column="L" dataType="TEXT" autoTrim="TRUE" fieldName="approvedStatus" />
+				<DataCell row="1" column="M" dataType="DATE" dataFormat="yyyy-MM-dd" fieldName="uwResultDate" />
+				<DataCell row="1" column="N" dataType="TEXT" autoTrim="TRUE" fieldName="remark" />
+				<EndRecordCondition column="B" comparator="BLANK" />
+			</DataRecord>
+		</DataSheet>
+
+	</DataSet>
+</FileFormat>

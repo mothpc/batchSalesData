@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileFormat fileName="DDP_MAPPING_2nd" fileType="EXCEL" locale="en-US">
+	<DataSet description="DDOP Mapping 2nd Result">
+
+		<DataSheet sheetName="RejectLot-Current">
+
+			<DataRecord listSourceName="dataRejectRecords" beginRow="1" endRow="99999">
+				<BeginRecordCondition column="D" comparator="EQ" checkValue="xRef" firstRowAsData="FALSE" />
+				<DataCell row="1" column="D" dataType="TEXT" autoTrim="TRUE" fieldName="xReference" />
+				<DataCell row="1" column="L" dataType="DATE" dataFormat="ddMMyyyy" fieldName="rejectDate" />
+				<DataCell row="1" column="M" dataType="TEXT" autoTrim="TRUE" fieldName="last4DigitDebitCard" />
+				<DataCell row="1" column="N" dataType="TEXT" autoTrim="TRUE" fieldName="last4DigitDebitCardNew" />
+				<DataCell row="1" column="O" dataType="TEXT" autoTrim="TRUE" fieldName="remark" />
+				<DataCell row="1" column="R" dataType="TEXT" autoTrim="TRUE" fieldName="commStatus" />
+				<EndRecordCondition column="D" comparator="BLANK" />
+			</DataRecord>
+
+		</DataSheet>
+
+	</DataSet>
+</FileFormat>

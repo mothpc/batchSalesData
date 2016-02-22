@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileFormat fileName="MTI Result 1st Billing" fileType="EXCEL" locale="en-US">
+	<DataSet description="MTI Result 1st Billing">
+
+		<DataSheet sheetIndex="0" skipWhenNull="FALSE">
+			<DataRecord listSourceName="dataRecords" beginRow="1" endRow="99999">
+				<BeginRecordCondition column="A" comparator="EQ" checkValue="KEY_CODE" firstRowAsData="FALSE" />
+				<DataCell row="1" column="A" dataType="TEXT" autoTrim="TRUE" fieldName="campaignCode" />
+				<DataCell row="1" column="B" dataType="TEXT" autoTrim="TRUE" fieldName="keyCode" />
+				<DataCell row="1" column="C" dataType="TEXT" autoTrim="TRUE" fieldName="uniqueId" />
+				<DataCell row="1" column="D" dataType="TEXT" autoTrim="TRUE" fieldName="callDate" />
+				<DataCell row="1" column="E" dataType="TEXT" autoTrim="TRUE" fieldName="effectiveDate" />
+				<DataCell row="1" column="F" dataType="TEXT" autoTrim="TRUE" fieldName="issueDate" />
+				<DataCell row="1" column="G" dataType="TEXT" autoTrim="TRUE" fieldName="citizenId" />
+				<DataCell row="1" column="H" dataType="TEXT" autoTrim="TRUE" fieldName="customerName" />
+				<DataCell row="1" column="I" dataType="TEXT" fieldName="productCode"/>
+				<DataCell row="1" column="I" dataType="NUMBER" dataFormat="###0.00" fieldName="product" recoveryType="TEXT" />
+				<DataCell row="1" column="J" dataType="TEXT" autoTrim="TRUE" fieldName="cPlan" />
+				<DataCell row="1" column="K" dataType="TEXT" autoTrim="TRUE" fieldName="category" />
+				<DataCell row="1" column="L" dataType="TEXT" autoTrim="TRUE" fieldName="sumInsure" />
+				<DataCell row="1" column="M" dataType="TEXT" autoTrim="TRUE" fieldName="nPremium" />
+				<DataCell row="1" column="N" dataType="TEXT" autoTrim="TRUE" fieldName="accountType" />
+				<DataCell row="1" column="O" dataType="TEXT" autoTrim="TRUE" fieldName="billingMode" />
+				<DataCell row="1" column="P" dataType="TEXT" autoTrim="TRUE" fieldName="tsrCode" />
+				<DataCell row="1" column="Q" dataType="TEXT" autoTrim="TRUE" fieldName="status" />
+				<DataCell row="1" column="R" dataType="TEXT" autoTrim="TRUE" fieldName="accountNo" />
+				<DataCell row="1" column="S" dataType="TEXT" autoTrim="TRUE" fieldName="policyNo" />
+				<DataCell row="1" column="T" dataType="TEXT" autoTrim="TRUE" fieldName="firstBillDate" />
+				<DataCell row="1" column="U" dataType="TEXT" autoTrim="TRUE" fieldName="nPaidSeq" />
+				<EndRecordCondition column="A" comparator="BLANK" />
+			</DataRecord>
+		</DataSheet>
+
+	</DataSet>
+</FileFormat>

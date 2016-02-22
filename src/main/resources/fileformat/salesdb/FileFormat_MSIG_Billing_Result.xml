@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileFormat fileName="MSIG Result 1st Billing" fileType="EXCEL" locale="en-US">
+	<DataSet description="MSIG Result 1st Billing">
+
+		<DataSheet sheetName="Paid" sheetIndex="0" skipWhenNull="FALSE">
+			<DataRecord listSourceName="dataRecords" beginRow="1" endRow="99999">
+				<BeginRecordCondition column="A" comparator="EQ" checkValue="ListlotName" firstRowAsData="FALSE" />
+				<DataCell row="1" column="A" dataType="TEXT" autoTrim="TRUE" fieldName="listLotName" />
+				<DataCell row="1" column="B" dataType="DATE" dataFormat="yyyy-MM-dd" fieldName="approveDate" />
+				<DataCell row="1" column="C" dataType="TEXT" autoTrim="TRUE" fieldName="xRef" />
+				<DataCell row="1" column="E" dataType="TEXT" autoTrim="TRUE" fieldName="customerName" />
+				<DataCell row="1" column="F" dataType="TEXT" autoTrim="TRUE" fieldName="productName" />
+				<DataCell row="1" column="G" dataType="NUMBER" dataFormat="#,##0.00" fieldName="premium" recoveryType="TEXT" />
+				<DataCell row="1" column="H" dataType="NUMBER" dataFormat="#,##0.00" fieldName="firstPremium" />
+				<DataCell row="1" column="I" dataType="NUMBER" dataFormat="#,##0.00" fieldName="afyp" />
+				<DataCell row="1" column="J" dataType="TEXT" autoTrim="TRUE" fieldName="paymentChannel" />
+				<DataCell row="1" column="K" dataType="TEXT" autoTrim="TRUE" fieldName="paymentMode" />
+				<DataCell row="1" column="L" dataType="DATE" dataFormat="yyyy-MM-dd" fieldName="saleDate" />
+				<DataCell row="1" column="M" dataType="TEXT" autoTrim="TRUE" fieldName="tsrCode" />
+				<DataCell row="1" column="N" dataType="TEXT" autoTrim="TRUE" fieldName="tsrName" />
+				<DataCell row="1" column="O" dataType="DATE" dataFormat="dd/MM/yyyy" fieldName="billingDate" />
+				<DataCell row="1" column="P" dataType="TEXT" autoTrim="TRUE" fieldName="code" />
+				<DataCell row="1" column="Q" dataType="TEXT" autoTrim="TRUE" fieldName="billingResult" />
+				<DataCell row="1" column="R" dataType="TEXT" autoTrim="TRUE" fieldName="billingCode" />
+				<DataCell row="1" column="S" dataType="TEXT" autoTrim="TRUE" fieldName="remark" />
+				<EndRecordCondition column="A" comparator="BLANK" />
+			</DataRecord>
+		</DataSheet>
+
+	</DataSet>
+</FileFormat>

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileFormat fileName="Daily_Performance_Tracking_ByLot.xls" fileType="EXCEL" locale="en-US"
+			templateFile="template/Daily_Summary_Status_Type_2.xls"
+			templateSheetName="Summary Status Type2 Template"
+			removeTemplateAfterComplete="TRUE">
+
+	<DataSet description="Daily Summary Status Type 2">
+
+		<DataSheet sheetIndex="1" displayGridlines="FALSE">
+			<!-- begin header -->
+			<DataCell row="1" column="A" dataType="TEXT" defaultValue="Summary Status Type2 Report"
+						templateRow="1" templateColumn="A" rowMergeFrom="1" rowMergeTo="2" columnMergeFrom="A" columnMergeTo="E"/>
+
+			<DataCell row="3" column="A" dataType="TEXT" defaultValue="Project :"    templateRow="3" templateColumn="A"/>
+			<DataCell row="4" column="A" dataType="TEXT" defaultValue="List Lot :"   templateRow="4" templateColumn="A"/>
+			<DataCell row="5" column="A" dataType="TEXT" defaultValue="Date Start:"  templateRow="5" templateColumn="A"/>
+			<DataCell row="6" column="A" dataType="TEXT" defaultValue="Print Date :" templateRow="6" templateColumn="A"/>
+			
+			<DataCell row="3" column="B" dataType="TEXT" fieldName="project"         templateRow="3" templateColumn="B" columnMergeFrom="B" columnMergeTo="C"/>
+			<DataCell row="3" column="C" dataType="TEXT" templateRow="3"             templateColumn="C"/>
+			<DataCell row="4" column="B" dataType="TEXT" fieldName="listLot"         templateRow="4" templateColumn="B" columnMergeFrom="B" columnMergeTo="C"/>
+			<DataCell row="4" column="C" dataType="TEXT" templateRow="4"             templateColumn="C"/>
+			<DataCell row="5" column="B" dataType="TEXT" fieldName="dateStart"       templateRow="5" templateColumn="B" columnMergeFrom="B" columnMergeTo="C"/>
+			<DataCell row="5" column="C" dataType="TEXT" templateRow="5"             templateColumn="C"/>
+			<DataCell row="6" column="B" dataType="TEXT" fieldName="printDate"       templateRow="6" templateColumn="B" columnMergeFrom="B" columnMergeTo="C"/>
+			<DataCell row="6" column="C" dataType="TEXT" templateRow="6"             templateColumn="C"/>
+			
+			<DataCell row="3" column="D" dataType="TEXT" defaultValue="Campaign :"   templateRow="3" templateColumn="D"/>
+			<DataCell row="4" column="D" dataType="TEXT" defaultValue="Status :"     templateRow="4" templateColumn="D"/>
+			<DataCell row="5" column="D" dataType="TEXT" defaultValue="Date End :"   templateRow="5" templateColumn="D"/>
+
+			<DataCell row="3" column="E" dataType="TEXT" fieldName="campaign"        templateRow="3" templateColumn="E" columnMergeFrom="E" columnMergeTo="F"/>
+			<DataCell row="3" column="F" dataType="TEXT" templateRow="3"             templateColumn="F"/>
+			<DataCell row="4" column="E" dataType="TEXT" fieldName="status"          templateRow="4" templateColumn="E" columnMergeFrom="E" columnMergeTo="F"/>
+			<DataCell row="4" column="F" dataType="TEXT" templateRow="4"             templateColumn="F"/>
+			<DataCell row="5" column="E" dataType="TEXT" fieldName="dateEnd"         templateRow="5" templateColumn="E" columnMergeFrom="E" columnMergeTo="F"/>
+			<DataCell row="5" column="F" dataType="TEXT" templateRow="5"             templateColumn="F"/>
+			
+			<DataCell row="7" column="A" dataType="TEXT" defaultValue="Status and Reason"
+						templateRow="7" templateColumn="A" rowMergeFrom="7" rowMergeTo="8" columnMergeFrom="A" columnMergeTo="E"/>
+			<DataCell row="7" column="B" dataType="TEXT" templateRow="7" templateColumn="B"/>
+			<DataCell row="7" column="C" dataType="TEXT" templateRow="7" templateColumn="C"/>
+			<DataCell row="7" column="D" dataType="TEXT" templateRow="7" templateColumn="D"/>
+			<DataCell row="7" column="E" dataType="TEXT" templateRow="7" templateColumn="E"/>
+			<DataCell row="8" column="B" dataType="TEXT" templateRow="7" templateColumn="B"/>
+			<DataCell row="8" column="C" dataType="TEXT" templateRow="7" templateColumn="C"/>
+			<DataCell row="8" column="D" dataType="TEXT" templateRow="7" templateColumn="D"/>
+			<DataCell row="8" column="E" dataType="TEXT" templateRow="7" templateColumn="E"/>
+			
+			
+			<!-- Row Header -->
+			<DataCell row="9" column="A" dataType="TEXT" defaultValue="Cancel"
+						templateRow="9" templateColumn="A" rowMergeFrom="9" rowMergeTo="10" columnMergeFrom="A" columnMergeTo="B"/>
+			<DataCell row="9"  column="B" dataType="TEXT" templateRow="9"  templateColumn="B"/>
+			<DataCell row="10" column="A" dataType="TEXT" templateRow="10" templateColumn="A"/>
+			<DataCell row="10" column="B" dataType="TEXT" templateRow="10" templateColumn="B"/>
+			
+			<DataCell row="9" column="C" dataType="TEXT" defaultValue="Customer cancel policy"
+						templateRow="9" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="9" column="D" dataType="TEXT" templateRow="9" templateColumn="D"/>
+			<DataCell row="9" column="E" dataType="TEXT" templateRow="9" templateColumn="E"/>
+			
+			<DataCell row="10" column="C" dataType="TEXT" defaultValue=""
+						templateRow="10" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="10" column="D" dataType="TEXT" templateRow="10" templateColumn="D"/>
+			<DataCell row="10" column="E" dataType="TEXT" templateRow="10" templateColumn="E"/>
+			
+			<DataCell row="11" column="A" dataType="TEXT" defaultValue="InEffectiveLead"
+						templateRow="11" templateColumn="A" rowMergeFrom="11" rowMergeTo="16" columnMergeFrom="A" columnMergeTo="B"/>
+			<DataCell row="11" column="B" dataType="TEXT" templateRow="11" templateColumn="B"/>
+			<DataCell row="12" column="A" dataType="TEXT" templateRow="12" templateColumn="A"/>
+			<DataCell row="12" column="B" dataType="TEXT" templateRow="12" templateColumn="B"/>
+			<DataCell row="13" column="A" dataType="TEXT" templateRow="13" templateColumn="A"/>
+			<DataCell row="13" column="B" dataType="TEXT" templateRow="13" templateColumn="B"/>
+			<DataCell row="14" column="A" dataType="TEXT" templateRow="14" templateColumn="A"/>
+			<DataCell row="14" column="B" dataType="TEXT" templateRow="14" templateColumn="B"/>
+			<DataCell row="15" column="A" dataType="TEXT" templateRow="15" templateColumn="A"/>
+			<DataCell row="15" column="B" dataType="TEXT" templateRow="15" templateColumn="B"/>
+			<DataCell row="16" column="A" dataType="TEXT" templateRow="16" templateColumn="A"/>
+			<DataCell row="16" column="B" dataType="TEXT" templateRow="16" templateColumn="B"/>
+			
+			<DataCell row="11" column="C" dataType="TEXT" defaultValue="เบอร์ไม่สมบูรณ์/ชื่อซ้ำ"
+						templateRow="11" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="11" column="D" dataType="TEXT" templateRow="11" templateColumn="D"/>
+			<DataCell row="11" column="E" dataType="TEXT" templateRow="11" templateColumn="E"/>
+			
+			<DataCell row="12" column="C" dataType="TEXT" defaultValue="Black list/BP Suppress"
+						templateRow="12" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="12" column="D" dataType="TEXT" templateRow="12" templateColumn="D"/>
+			<DataCell row="12" column="E" dataType="TEXT" templateRow="12" templateColumn="E"/>
+			
+			<DataCell row="13" column="C" dataType="TEXT" defaultValue="ตาย"
+						templateRow="13" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="13" column="D" dataType="TEXT" templateRow="13" templateColumn="D"/>
+			<DataCell row="13" column="E" dataType="TEXT" templateRow="13" templateColumn="E"/>
+			
+			<DataCell row="14" column="C" dataType="TEXT" defaultValue="ลูกค้าเป็นชาวต่างชาติ"
+						templateRow="14" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="14" column="D" dataType="TEXT" templateRow="14" templateColumn="D"/>
+			<DataCell row="14" column="E" dataType="TEXT" templateRow="14" templateColumn="E"/>
+			
+			<DataCell row="15" column="C" dataType="TEXT" defaultValue="เบอร์ผิด/เบอร์เสีย/ไม่อัพเดท/ไม่มีเบอร์ต่อ/Fax"
+						templateRow="15" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="15" column="D" dataType="TEXT" templateRow="15" templateColumn="D"/>
+			<DataCell row="15" column="E" dataType="TEXT" templateRow="15" templateColumn="E"/>
+			
+			<DataCell row="16" column="C" dataType="TEXT" defaultValue=""
+						templateRow="16" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="16" column="D" dataType="TEXT" templateRow="16" templateColumn="D"/>
+			<DataCell row="16" column="E" dataType="TEXT" templateRow="16" templateColumn="E"/>
+			
+			<DataCell row="17" column="A" dataType="TEXT" defaultValue="NonTarget"
+						templateRow="17" templateColumn="A" rowMergeFrom="17" rowMergeTo="23" columnMergeFrom="A" columnMergeTo="B"/>
+			<DataCell row="17" column="B" dataType="TEXT" templateRow="17" templateColumn="B"/>
+			<DataCell row="18" column="A" dataType="TEXT" templateRow="18" templateColumn="A"/>
+			<DataCell row="18" column="B" dataType="TEXT" templateRow="18" templateColumn="B"/>
+			<DataCell row="19" column="A" dataType="TEXT" templateRow="19" templateColumn="A"/>
+			<DataCell row="19" column="B" dataType="TEXT" templateRow="19" templateColumn="B"/>
+			<DataCell row="20" column="A" dataType="TEXT" templateRow="20" templateColumn="A"/>
+			<DataCell row="20" column="B" dataType="TEXT" templateRow="20" templateColumn="B"/>
+			<DataCell row="21" column="A" dataType="TEXT" templateRow="21" templateColumn="A"/>
+			<DataCell row="21" column="B" dataType="TEXT" templateRow="21" templateColumn="B"/>
+			<DataCell row="22" column="A" dataType="TEXT" templateRow="22" templateColumn="A"/>
+			<DataCell row="22" column="B" dataType="TEXT" templateRow="22" templateColumn="B"/>
+			<DataCell row="23" column="A" dataType="TEXT" templateRow="23" templateColumn="A"/>
+			<DataCell row="23" column="B" dataType="TEXT" templateRow="23" templateColumn="B"/>
+			
+			<DataCell row="17" column="C" dataType="TEXT" defaultValue="อายุไม่อยู่ในกลุ่มเป้าหมาย"
+						templateRow="17" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="17" column="D" dataType="TEXT" templateRow="17" templateColumn="D"/>
+			<DataCell row="17" column="E" dataType="TEXT" templateRow="17" templateColumn="E"/>
+			
+			<DataCell row="18" column="C" dataType="TEXT" defaultValue="มีปัญหาสุขภาพ ไม่สามรถเข้าร่วมโครงการได้"
+						templateRow="18" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="18" column="D" dataType="TEXT" templateRow="18" templateColumn="D"/>
+			<DataCell row="18" column="E" dataType="TEXT" templateRow="18" templateColumn="E"/>
+			
+			<DataCell row="19" column="C" dataType="TEXT" defaultValue="อยู่ในพื้นที่เสี่ยง"
+						templateRow="19" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="19" column="D" dataType="TEXT" templateRow="19" templateColumn="D"/>
+			<DataCell row="19" column="E" dataType="TEXT" templateRow="19" templateColumn="E"/>
+			
+			<DataCell row="20" column="C" dataType="TEXT" defaultValue="ไม่มีบัตรเครดิต/ยกเลิกบัตรแล้ว"
+						templateRow="20" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="20" column="D" dataType="TEXT" templateRow="20" templateColumn="D"/>
+			<DataCell row="20" column="E" dataType="TEXT" templateRow="20" templateColumn="E"/>
+			
+			<DataCell row="21" column="C" dataType="TEXT" defaultValue="อาชีพไม่อยู่ในกลุ่มเป้าหมาย"
+						templateRow="21" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="21" column="D" dataType="TEXT" templateRow="21" templateColumn="D"/>
+			<DataCell row="21" column="E" dataType="TEXT" templateRow="21" templateColumn="E"/>
+			
+			<DataCell row="22" column="C" dataType="TEXT" defaultValue="ศาสนาไม่อยู่ในกลุ่มเป้าหมาย"
+						templateRow="22" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="22" column="D" dataType="TEXT" templateRow="22" templateColumn="D"/>
+			<DataCell row="22" column="E" dataType="TEXT" templateRow="22" templateColumn="E"/>
+			
+			<DataCell row="23" column="C" dataType="TEXT" defaultValue=""
+						templateRow="23" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="23" column="D" dataType="TEXT" templateRow="23" templateColumn="D"/>
+			<DataCell row="23" column="E" dataType="TEXT" templateRow="23" templateColumn="E"/>
+			
+			<DataCell row="24" column="A" dataType="TEXT" defaultValue="NoSale"
+						templateRow="24" templateColumn="A" rowMergeFrom="24" rowMergeTo="39" columnMergeFrom="A" columnMergeTo="B"/>
+			<DataCell row="24" column="B" dataType="TEXT" templateRow="24" templateColumn="B"/>
+			<DataCell row="25" column="A" dataType="TEXT" templateRow="25" templateColumn="A"/>
+			<DataCell row="25" column="B" dataType="TEXT" templateRow="25" templateColumn="B"/>
+			<DataCell row="26" column="A" dataType="TEXT" templateRow="26" templateColumn="A"/>
+			<DataCell row="26" column="B" dataType="TEXT" templateRow="26" templateColumn="B"/>
+			<DataCell row="27" column="A" dataType="TEXT" templateRow="27" templateColumn="A"/>
+			<DataCell row="27" column="B" dataType="TEXT" templateRow="27" templateColumn="B"/>
+			<DataCell row="28" column="A" dataType="TEXT" templateRow="28" templateColumn="A"/>
+			<DataCell row="28" column="B" dataType="TEXT" templateRow="28" templateColumn="B"/>
+			<DataCell row="29" column="A" dataType="TEXT" templateRow="29" templateColumn="A"/>
+			<DataCell row="29" column="B" dataType="TEXT" templateRow="29" templateColumn="B"/>
+			<DataCell row="30" column="A" dataType="TEXT" templateRow="30" templateColumn="A"/>
+			<DataCell row="30" column="B" dataType="TEXT" templateRow="30" templateColumn="B"/>
+			<DataCell row="31" column="A" dataType="TEXT" templateRow="31" templateColumn="A"/>
+			<DataCell row="31" column="B" dataType="TEXT" templateRow="31" templateColumn="B"/>
+			<DataCell row="32" column="A" dataType="TEXT" templateRow="32" templateColumn="A"/>
+			<DataCell row="32" column="B" dataType="TEXT" templateRow="32" templateColumn="B"/>
+			<DataCell row="33" column="A" dataType="TEXT" templateRow="33" templateColumn="A"/>
+			<DataCell row="33" column="B" dataType="TEXT" templateRow="33" templateColumn="B"/>
+			<DataCell row="34" column="A" dataType="TEXT" templateRow="34" templateColumn="A"/>
+			<DataCell row="34" column="B" dataType="TEXT" templateRow="34" templateColumn="B"/>
+			<DataCell row="35" column="A" dataType="TEXT" templateRow="35" templateColumn="A"/>
+			<DataCell row="35" column="B" dataType="TEXT" templateRow="35" templateColumn="B"/>
+			<DataCell row="36" column="A" dataType="TEXT" templateRow="36" templateColumn="A"/>
+			<DataCell row="36" column="B" dataType="TEXT" templateRow="36" templateColumn="B"/>
+			<DataCell row="37" column="A" dataType="TEXT" templateRow="37" templateColumn="A"/>
+			<DataCell row="37" column="B" dataType="TEXT" templateRow="37" templateColumn="B"/>
+			<DataCell row="38" column="A" dataType="TEXT" templateRow="38" templateColumn="A"/>
+			<DataCell row="38" column="B" dataType="TEXT" templateRow="38" templateColumn="B"/>
+			<DataCell row="39" column="A" dataType="TEXT" templateRow="39" templateColumn="A"/>
+			<DataCell row="39" column="B" dataType="TEXT" templateRow="39" templateColumn="B"/>
+			
+			<DataCell row="24" column="C" dataType="TEXT" defaultValue="มีกรมธรรม์ของบริษัทนี้อยู่แล้ว สมัครไปแล้ว"
+						templateRow="24" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="24" column="D" dataType="TEXT" templateRow="24" templateColumn="D"/>
+			<DataCell row="24" column="E" dataType="TEXT" templateRow="24" templateColumn="E"/>
+			
+			<DataCell row="25" column="C" dataType="TEXT" defaultValue="ลูกค้าไม่ให้โทรมาขายประกันอีก"
+						templateRow="25" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="25" column="D" dataType="TEXT" templateRow="25" templateColumn="D"/>
+			<DataCell row="25" column="E" dataType="TEXT" templateRow="25" templateColumn="E"/>
+			
+			<DataCell row="26" column="C" dataType="TEXT" defaultValue="มีสวัสดิการพอเพียงแล้ว"
+						templateRow="26" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="26" column="D" dataType="TEXT" templateRow="26" templateColumn="D"/>
+			<DataCell row="26" column="E" dataType="TEXT" templateRow="26" templateColumn="E"/>
+			
+			<DataCell row="27" column="C" dataType="TEXT" defaultValue="ไม่สนใจ - ได้ฟัง script"
+						templateRow="27" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="27" column="D" dataType="TEXT" templateRow="27" templateColumn="D"/>
+			<DataCell row="27" column="E" dataType="TEXT" templateRow="27" templateColumn="E"/>
+			
+			<DataCell row="28" column="C" dataType="TEXT" defaultValue="ไม่ระบุ"
+						templateRow="28" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="28" column="D" dataType="TEXT" templateRow="28" templateColumn="D"/>
+			<DataCell row="28" column="E" dataType="TEXT" templateRow="28" templateColumn="E"/>
+			
+			<DataCell row="29" column="C" dataType="TEXT" defaultValue="ไม่มีกำลังในการส่งเบี้ย"
+						templateRow="29" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="29" column="D" dataType="TEXT" templateRow="29" templateColumn="D"/>
+			<DataCell row="29" column="E" dataType="TEXT" templateRow="29" templateColumn="E"/>
+			
+			<DataCell row="30" column="C" dataType="TEXT" defaultValue="ทัศนคติไม่ดี/ไม่สนใจการประกันชีวิต"
+						templateRow="30" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="30" column="D" dataType="TEXT" templateRow="30" templateColumn="D"/>
+			<DataCell row="30" column="E" dataType="TEXT" templateRow="30" templateColumn="E"/>
+			
+			<DataCell row="31" column="C" dataType="TEXT" defaultValue="ไม่สนใจ - ไม่ได้ฟัง script"
+						templateRow="31" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="31" column="D" dataType="TEXT" templateRow="31" templateColumn="D"/>
+			<DataCell row="31" column="E" dataType="TEXT" templateRow="31" templateColumn="E"/>
+			
+			<DataCell row="32" column="C" dataType="TEXT" defaultValue="ไม่ให้ติดต่อมาอีกทุกช่องทางตลอดไป"
+						templateRow="32" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="32" column="D" dataType="TEXT" templateRow="32" templateColumn="D"/>
+			<DataCell row="32" column="E" dataType="TEXT" templateRow="32" templateColumn="E"/>
+			
+			<DataCell row="33" column="C" dataType="TEXT" defaultValue="ผู้อื่นไม่สนับสนุน"
+						templateRow="33" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="33" column="D" dataType="TEXT" templateRow="33" templateColumn="D"/>
+			<DataCell row="33" column="E" dataType="TEXT" templateRow="33" templateColumn="E"/>
+			
+			<DataCell row="34" column="C" dataType="TEXT" defaultValue="วิธีการชำระเงินไม่สะดวก"
+						templateRow="34" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="34" column="D" dataType="TEXT" templateRow="34" templateColumn="D"/>
+			<DataCell row="34" column="E" dataType="TEXT" templateRow="34" templateColumn="E"/>
+			
+			<DataCell row="35" column="C" dataType="TEXT" defaultValue="ไม่ต้องการเปิดเผยข้อมูลส่วนตัว"
+						templateRow="35" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="35" column="D" dataType="TEXT" templateRow="35" templateColumn="D"/>
+			<DataCell row="35" column="E" dataType="TEXT" templateRow="35" templateColumn="E"/>
+			
+			<DataCell row="36" column="C" dataType="TEXT" defaultValue="กรมธรรม์ราคาไม่เหมาะสม"
+						templateRow="36" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="36" column="D" dataType="TEXT" templateRow="36" templateColumn="D"/>
+			<DataCell row="36" column="E" dataType="TEXT" templateRow="36" templateColumn="E"/>
+			
+			<DataCell row="37" column="C" dataType="TEXT" defaultValue="กรมธรรม์ไม่น่าสนใจ"
+						templateRow="37" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="37" column="D" dataType="TEXT" templateRow="37" templateColumn="D"/>
+			<DataCell row="37" column="E" dataType="TEXT" templateRow="37" templateColumn="E"/>
+			
+			<DataCell row="38" column="C" dataType="TEXT" defaultValue="โครงการของบริษัทอื่นดีกว่า ต้องมีคู่เปรียบเทียบ"
+						templateRow="38" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="38" column="D" dataType="TEXT" templateRow="38" templateColumn="D"/>
+			<DataCell row="38" column="E" dataType="TEXT" templateRow="38" templateColumn="E"/>
+			
+			<DataCell row="39" column="C" dataType="TEXT" defaultValue=""
+						templateRow="39" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="39" column="D" dataType="TEXT" templateRow="39" templateColumn="D"/>
+			<DataCell row="39" column="E" dataType="TEXT" templateRow="39" templateColumn="E"/>
+			
+			<DataCell row="40" column="A" dataType="TEXT" defaultValue="Sale"
+						templateRow="40" templateColumn="A" rowMergeFrom="40" rowMergeTo="46" columnMergeFrom="A" columnMergeTo="B"/>
+			<DataCell row="40" column="B" dataType="TEXT" templateRow="40" templateColumn="B"/>
+			<DataCell row="41" column="A" dataType="TEXT" templateRow="41" templateColumn="A"/>
+			<DataCell row="41" column="B" dataType="TEXT" templateRow="41" templateColumn="B"/>
+			<DataCell row="42" column="A" dataType="TEXT" templateRow="42" templateColumn="A"/>
+			<DataCell row="42" column="B" dataType="TEXT" templateRow="42" templateColumn="B"/>
+			<DataCell row="43" column="A" dataType="TEXT" templateRow="43" templateColumn="A"/>
+			<DataCell row="43" column="B" dataType="TEXT" templateRow="43" templateColumn="B"/>
+			<DataCell row="44" column="A" dataType="TEXT" templateRow="44" templateColumn="A"/>
+			<DataCell row="44" column="B" dataType="TEXT" templateRow="44" templateColumn="B"/>
+			<DataCell row="45" column="A" dataType="TEXT" templateRow="45" templateColumn="A"/>
+			<DataCell row="45" column="B" dataType="TEXT" templateRow="45" templateColumn="B"/>
+			<DataCell row="46" column="A" dataType="TEXT" templateRow="10" templateColumn="A"/>
+			<DataCell row="46" column="B" dataType="TEXT" templateRow="10" templateColumn="B"/>
+			
+			<DataCell row="40" column="C" dataType="TEXT" defaultValue="พอใจในผลประโยชน์โครงการ"
+						templateRow="40" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="40" column="D" dataType="TEXT" templateRow="40" templateColumn="D"/>
+			<DataCell row="40" column="E" dataType="TEXT" templateRow="40" templateColumn="E"/>
+			
+			<DataCell row="41" column="C" dataType="TEXT" defaultValue="ค่าเบี้ยถูก"
+						templateRow="41" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="41" column="D" dataType="TEXT" templateRow="41" templateColumn="D"/>
+			<DataCell row="41" column="E" dataType="TEXT" templateRow="41" templateColumn="E"/>
+			
+			<DataCell row="42" column="C" dataType="TEXT" defaultValue="มั่นใจในบริษัทประกัน"
+						templateRow="42" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="42" column="D" dataType="TEXT" templateRow="42" templateColumn="D"/>
+			<DataCell row="42" column="E" dataType="TEXT" templateRow="42" templateColumn="E"/>
+			
+			<DataCell row="43" column="C" dataType="TEXT" defaultValue="ต้องการลดหย่อนภาษี"
+						templateRow="43" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="43" column="D" dataType="TEXT" templateRow="43" templateColumn="D"/>
+			<DataCell row="43" column="E" dataType="TEXT" templateRow="43" templateColumn="E"/>
+			
+			<DataCell row="44" column="C" dataType="TEXT" defaultValue="พอใจการให้ข้อมูลของพนักงาน"
+						templateRow="44" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="44" column="D" dataType="TEXT" templateRow="44" templateColumn="D"/>
+			<DataCell row="44" column="E" dataType="TEXT" templateRow="44" templateColumn="E"/>
+			
+			<DataCell row="45" column="C" dataType="TEXT" defaultValue="ซื้อแต่ให้เหตุผลไม่ได้"
+						templateRow="45" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="45" column="D" dataType="TEXT" templateRow="45" templateColumn="D"/>
+			<DataCell row="45" column="E" dataType="TEXT" templateRow="45" templateColumn="E"/>
+			
+			<DataCell row="46" column="C" dataType="TEXT" defaultValue=""
+						templateRow="46" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="46" column="D" dataType="TEXT" templateRow="46" templateColumn="D"/>
+			<DataCell row="46" column="E" dataType="TEXT" templateRow="46" templateColumn="E"/>
+			
+			<DataCell row="47" column="A" dataType="TEXT" defaultValue="UnReachable"
+						templateRow="9" templateColumn="A" rowMergeFrom="47" rowMergeTo="51" columnMergeFrom="A" columnMergeTo="B"/>
+			<DataCell row="47" column="B" dataType="TEXT" templateRow="47" templateColumn="B"/>
+			<DataCell row="48" column="A" dataType="TEXT" templateRow="48" templateColumn="A"/>
+			<DataCell row="48" column="B" dataType="TEXT" templateRow="48" templateColumn="B"/>
+			<DataCell row="49" column="A" dataType="TEXT" templateRow="49" templateColumn="A"/>
+			<DataCell row="49" column="B" dataType="TEXT" templateRow="49" templateColumn="B"/>
+			<DataCell row="50" column="A" dataType="TEXT" templateRow="50" templateColumn="A"/>
+			<DataCell row="50" column="B" dataType="TEXT" templateRow="50" templateColumn="B"/>
+			<DataCell row="51" column="A" dataType="TEXT" templateRow="10" templateColumn="A"/>
+			<DataCell row="51" column="B" dataType="TEXT" templateRow="10" templateColumn="B"/>
+			
+			<DataCell row="47" column="C" dataType="TEXT" defaultValue="IT Clear Lead"
+						templateRow="47" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="47" column="D" dataType="TEXT" templateRow="47" templateColumn="D"/>
+			<DataCell row="47" column="E" dataType="TEXT" templateRow="47" templateColumn="E"/>
+			
+			<DataCell row="48" column="C" dataType="TEXT" defaultValue="ผู้อื่นรับสายและไม่ต้องการให้โทรมาอีก ( ผู้อื่นรับสาย – เบอร์ถูก )"
+						templateRow="48" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="48" column="D" dataType="TEXT" templateRow="48" templateColumn="D"/>
+			<DataCell row="48" column="E" dataType="TEXT" templateRow="48" templateColumn="E"/>
+			
+			<DataCell row="49" column="C" dataType="TEXT" defaultValue="ผู้อื่นรับสายและไม่ต้องการให้โทรมาอีก (ไม่ใช่เจ้าของเบอร์ - เบอร์ผิด)"
+						templateRow="49" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="49" column="D" dataType="TEXT" templateRow="49" templateColumn="D"/>
+			<DataCell row="49" column="E" dataType="TEXT" templateRow="49" templateColumn="E"/>
+			
+			<DataCell row="50" column="C" dataType="TEXT" defaultValue="ตามตัวไม่ได้"
+						templateRow="50" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="50" column="D" dataType="TEXT" templateRow="50" templateColumn="D"/>
+			<DataCell row="50" column="E" dataType="TEXT" templateRow="50" templateColumn="E"/>
+			
+			<DataCell row="51" column="C" dataType="TEXT" defaultValue=""
+						templateRow="51" templateColumn="C" columnMergeFrom="C" columnMergeTo="E"/>
+			<DataCell row="51" column="D" dataType="TEXT" templateRow="51" templateColumn="D"/>
+			<DataCell row="51" column="E" dataType="TEXT" templateRow="51" templateColumn="E"/>
+			
+			<DataCell row="52" column="A" dataType="TEXT" defaultValue="Total"
+						templateRow="53" templateColumn="A" columnMergeFrom="A" columnMergeTo="E"/>
+			<DataCell row="52" column="B" dataType="TEXT" templateRow="53" templateColumn="B"/>
+			<DataCell row="52" column="C" dataType="TEXT" templateRow="53" templateColumn="C"/>
+			<DataCell row="52" column="D" dataType="TEXT" templateRow="53" templateColumn="D"/>
+			<DataCell row="52" column="E" dataType="TEXT" templateRow="53" templateColumn="E"/>
+			<!-- Row Header -->
+			
+			<!-- end header -->
+
+			<!-- Data 1 -->
+			<DataRecord listSourceName="headerRecord1" beginRow="7" endRow="8">
+				<DataCell row="1" column="F" dataType="TEXT"   templateRow="7" templateColumn="F" fieldName="LotDescription"
+						rowMergeFrom="7" rowMergeTo="8"/>
+				<DataCell row="8" column="F" dataType="TEXT"   templateRow="8" templateColumn="F"/>
+			</DataRecord>
+
+			<DataRecord listSourceName="dataRecord1" beginRow="9" endRow="99999">
+				<DataCell row="1" column="F" dataType="NUMBER" templateRow="9" templateColumn="F" fieldName="NoOfRecord"/>
+			</DataRecord>
+			<!-- Data 1 -->
+
+			<!-- Data 2 -->
+			<DataRecord listSourceName="headerRecord2" beginRow="7" endRow="8" skipWhenNull="TRUE">
+				<DataCell row="1" column="G" dataType="TEXT"   templateRow="7" templateColumn="F" fieldName="LotDescription"
+						rowMergeFrom="7" rowMergeTo="8"/>
+				<DataCell row="8" column="G" dataType="TEXT"   templateRow="8" templateColumn="F"/>
+			</DataRecord>
+
+			<DataRecord listSourceName="dataRecord2" beginRow="9" endRow="99999" skipWhenNull="TRUE">
+				<DataCell row="1" column="G" dataType="NUMBER" templateRow="9" templateColumn="F" fieldName="NoOfRecord"/>
+			</DataRecord>
+			<!-- Data 2 -->
+
+
+			<RowHeight row="7" height="10"/>
+
+			<ColumnWidth column="A" width="5000"/>
+			<ColumnWidth column="B" width="3000"/>
+			<ColumnWidth column="C" width="7000"/>
+			<ColumnWidth column="D" width="5000"/>
+			<ColumnWidth column="E" width="3000"/>
+			<ColumnWidth column="F" width="8000"/>
+			<ColumnWidth column="G" width="8000"/>
+			<ColumnWidth column="H" width="8000"/>
+			<ColumnWidth column="I" width="8000"/>
+			<ColumnWidth column="J" width="8000"/>
+			<ColumnWidth column="K" width="8000"/>
+			<ColumnWidth column="L" width="8000"/>
+			<ColumnWidth column="M" width="8000"/>
+
+		</DataSheet>
+
+	</DataSet>
+</FileFormat>

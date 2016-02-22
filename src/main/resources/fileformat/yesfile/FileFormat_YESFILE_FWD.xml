@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileFormat fileType="EXCEL" locale="en-US">
+
+	<DataSet description="FWD_TVD_Endowment">
+
+		<DataSheet sheetIndex="0" skipWhenNull="TRUE">
+
+			<DataRecord listSourceName="yesRecords" beginRow="1" endRow="9999" skipWhenNull="FALSE">
+				<BeginRecordCondition column="A" comparator="EQ" checkValue="TYIDNO" firstRowAsData="FALSE" />
+				<DataCell row="1" column="A" dataType="TEXT" fieldName="CITIZEN_ID" dataFormat="0" />
+				<DataCell row="1" column="B" dataType="TEXT" fieldName="INS_TITLE" />
+				<DataCell row="1" column="C" dataType="TEXT" fieldName="INS_FIRSTNAME" />
+				<DataCell row="1" column="D" dataType="TEXT" fieldName="INS_LASTNAME" />
+				<DataCell row="1" column="E" dataType="TEXT" fieldName="INS_ADDR_1" />
+				<DataCell row="1" column="F" dataType="TEXT" fieldName="INS_ADDR_2" />
+				<DataCell row="1" column="G" dataType="TEXT" fieldName="INS_ADDR_3" />
+				<DataCell row="1" column="H" dataType="TEXT" fieldName="INS_ADDR_4" />
+				<DataCell row="1" column="I" dataType="TEXT" fieldName="INS_POST_CODE" />
+				<DataCell row="1" column="J" dataType="TEXT" fieldName="INS_COUNTRY" />
+				<DataCell row="1" column="K" dataType="DATE" fieldName="INS_DOB" dataFormat="ddMMyyyy" />
+				<DataCell row="1" column="M" dataType="TEXT" fieldName="INS_GENDER" />
+				<DataCell row="1" column="S" dataType="TEXT" fieldName="PRODUCT_PLAN" />
+				<DataCell row="1" column="T" dataType="TEXT" fieldName="SUM_ASSURED" />
+				<DataCell row="1" column="U" dataType="TEXT" fieldName="PREMIUM" />
+				<DataCell row="1" column="Z" dataType="TEXT" fieldName="MOBILE_NO" />
+				<DataCell row="1" column="AA" dataType="TEXT" fieldName="EMAIL" />
+				<DataCell row="1" column="AB" dataType="TEXT" fieldName="BENE_1_TITLE" />
+				<DataCell row="1" column="AC" dataType="TEXT" fieldName="BENE_1_FIRSTNAME" />
+				<DataCell row="1" column="AD" dataType="TEXT" fieldName="BENE_1_LASTNAME" />
+				<DataCell row="1" column="AE" dataType="NUMBER" fieldName="BENE_1_PERCENT" dataFormat="0" />
+				<DataCell row="1" column="AF" dataType="TEXT" fieldName="BENE_2_TITLE" />
+				<DataCell row="1" column="AG" dataType="TEXT" fieldName="BENE_2_FIRSTNAME" />
+				<DataCell row="1" column="AH" dataType="TEXT" fieldName="BENE_2_LASTNAME" />
+				<DataCell row="1" column="AI" dataType="NUMBER" fieldName="BENE_2_PERCENT" dataFormat="0" />
+				<DataCell row="1" column="AJ" dataType="TEXT" fieldName="BENE_3_TITLE" />
+				<DataCell row="1" column="AK" dataType="TEXT" fieldName="BENE_3_FIRSTNAME" />
+				<DataCell row="1" column="AL" dataType="TEXT" fieldName="BENE_3_LASTNAME" />
+				<DataCell row="1" column="AM" dataType="NUMBER" fieldName="BENE_3_PERCENT" dataFormat="0" />
+				<DataCell row="1" column="AN" dataType="TEXT" fieldName="BENE_4_TITLE" />
+				<DataCell row="1" column="AO" dataType="TEXT" fieldName="BENE_4_FIRSTNAME" />
+				<DataCell row="1" column="AP" dataType="TEXT" fieldName="BENE_4_LASTNAME" />
+				<DataCell row="1" column="AQ" dataType="NUMBER" fieldName="BENE_4_PERCENT" dataFormat="0" />
+				<DataCell row="1" column="AR" dataType="TEXT" fieldName="BENE_5_TITLE" />
+				<DataCell row="1" column="AS" dataType="TEXT" fieldName="BENE_5_FIRSTNAME" />
+				<DataCell row="1" column="AT" dataType="TEXT" fieldName="BENE_5_LASTNAME" />
+				<DataCell row="1" column="AU" dataType="NUMBER" fieldName="BENE_5_PERCENT" dataFormat="0" />
+				<DataCell row="1" column="BG" dataType="TEXT" fieldName="BANK_ACCOUNT_NO" />
+				<DataCell row="1" column="BH" dataType="TEXT" fieldName="ACCOUNT_TYPE" />
+				<DataCell row="1" column="BI" dataType="TEXT" fieldName="ACCOUNT_EXPIRED" />
+				<DataCell row="1" column="BS" dataType="TEXT" fieldName="POLICY_NO" />
+				<DataCell row="1" column="BP" dataType="DATE" fieldName="APPROVE_DATE" dataFormat="ddMMyyyy" />
+				<DataCell row="1" column="BQ" dataType="TEXT" fieldName="APPROVE_TIME" />
+				<DataCell row="1" column="BS" dataType="TEXT" fieldName="POLICY_NO" />
+				<DataCell row="1" column="BS" dataType="TEXT" fieldName="PAYMENT_FREQUENCY" />
+				<EndRecordCondition column="A" comparator="BLANK" />
+			</DataRecord>
+
+		</DataSheet>
+
+	</DataSet>
+</FileFormat>

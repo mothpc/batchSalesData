@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileFormat fileName="MSIG UOB Result 1st Billing" fileType="EXCEL" locale="en-US">
+	<DataSet description="MSIG UOB Result 1st Billing">
+
+		<DataSheet sheetIndex="0" skipWhenNull="FALSE">
+			<DataRecord listSourceName="dataRecords" beginRow="1" endRow="99999">
+				<BeginRecordCondition column="A" comparator="EQ" checkValue="billing date" firstRowAsData="FALSE" />
+				<DataCell row="1" column="A" dataType="DATE" dataFormat="dd/MM/yyyy" fieldName="billingDate" />
+				<DataCell row="1" column="B" dataType="NUMBER" recoveryType="TEXT" fieldName="premium" />
+				<DataCell row="1" column="C" dataType="TEXT" autoTrim="TRUE" fieldName="policy1" />
+				<DataCell row="1" column="D" dataType="TEXT" autoTrim="TRUE" fieldName="policy2" />
+				<DataCell row="1" column="E" dataType="TEXT" autoTrim="TRUE" fieldName="result" />
+				<DataCell row="1" column="F" dataType="TEXT" autoTrim="TRUE" fieldName="customerFirstName" />
+				<DataCell row="1" column="G" dataType="TEXT" autoTrim="TRUE" fieldName="customerLastName" />
+				<EndRecordCondition column="A" comparator="BLANK" />
+			</DataRecord>
+		</DataSheet>
+
+	</DataSet>
+</FileFormat>

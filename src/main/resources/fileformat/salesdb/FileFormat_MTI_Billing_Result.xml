@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileFormat fileName="MTI Result 1st Billing" fileType="EXCEL" locale="en-US">
+	<DataSet description="MTI Result 1st Billing">
+
+		<DataSheet sheetIndex="0" skipWhenNull="FALSE">
+			<DataRecord listSourceName="dataRecords" beginRow="1" endRow="99999">
+				<BeginRecordCondition column="A" comparator="EQ" checkValue="CAMPAIGNCODE" firstRowAsData="FALSE" />
+				<DataCell row="1" column="A" dataType="TEXT" autoTrim="TRUE" fieldName="campaignCode" />
+				<DataCell row="1" column="B" dataType="TEXT" autoTrim="TRUE" fieldName="company" />
+				<DataCell row="1" column="C" dataType="TEXT" autoTrim="TRUE" fieldName="msrPrd" />
+				<DataCell row="1" column="D" dataType="TEXT" autoTrim="TRUE" fieldName="cisId" />
+				<DataCell row="1" column="E" dataType="TEXT" autoTrim="TRUE" fieldName="policyId" />
+				<DataCell row="1" column="F" dataType="TEXT" autoTrim="TRUE" fieldName="collectionDate" />
+				<DataCell row="1" column="G" dataType="TEXT" autoTrim="TRUE" fieldName="transactionType" />
+				<DataCell row="1" column="H" dataType="TEXT" autoTrim="TRUE" fieldName="billRound" />
+				<DataCell row="1" column="I" dataType="NUMBER" dataFormat="###0.00" fieldName="premium" recoveryType="TEXT" />
+				<DataCell row="1" column="J" dataType="TEXT" autoTrim="TRUE" fieldName="paymentCD" />
+				<DataCell row="1" column="K" dataType="TEXT" autoTrim="TRUE" fieldName="paymentMD" />
+				<DataCell row="1" column="L" dataType="TEXT" autoTrim="TRUE" fieldName="cpropId" />
+				<DataCell row="1" column="M" dataType="TEXT" autoTrim="TRUE" fieldName="transCode" />
+				<DataCell row="1" column="N" dataType="TEXT" autoTrim="TRUE" fieldName="zrePolNo" />
+				<DataCell row="1" column="O" dataType="TEXT" autoTrim="TRUE" fieldName="accNum" />
+				<DataCell row="1" column="P" dataType="TEXT" autoTrim="TRUE" fieldName="tranDate" />
+				<DataCell row="1" column="Q" dataType="TEXT" autoTrim="TRUE" fieldName="ckeyCode" />
+				<EndRecordCondition column="A" comparator="BLANK" />
+			</DataRecord>
+		</DataSheet>
+
+	</DataSet>
+</FileFormat>
