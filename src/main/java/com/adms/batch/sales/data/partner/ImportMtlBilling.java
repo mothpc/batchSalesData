@@ -49,14 +49,16 @@ public class ImportMtlBilling extends AbstractImportSalesJob {
 
 		String remarkString = dataHolder.get("remark").getStringValue();
 		String billingStatusString = null;
-		if (StringUtils.isBlank(remarkString))
-		{
-			billingStatusString = "Paid";
-		}
-		else
-		{
-			billingStatusString = "Reject";
-		}
+		
+		billingStatusString = isPaidSheet ? "Paid" : "Reject";
+//		if (StringUtils.isBlank(remarkString))
+//		{
+//			billingStatusString = "Paid";
+//		}
+//		else
+//		{
+//			billingStatusString = "Reject";
+//		}
 
 		if (StringUtils.isNotBlank(billingStatusString))
 		{
@@ -65,7 +67,10 @@ public class ImportMtlBilling extends AbstractImportSalesJob {
 			{
 				throw new Exception("BillingStatus not found for billingStatusString [" + billingStatusString + "]");
 			}
-			billingResult.setBillingStatus(billingStatus);
+			if(billingResult.getBillingStatus() == null
+					|| (billingResult.getBillingStatus() != null && billingResult.getBillingStatus().getBillingStatus().equals("Reject"))) {
+				billingResult.setBillingStatus(billingStatus);
+			}
 		}
 
 		billingResult.setRemark(remarkString);
@@ -155,6 +160,8 @@ public class ImportMtlBilling extends AbstractImportSalesJob {
 			}
 		}
 	}
+	
+	private boolean isPaidSheet;
 
 	private void importFile(String fileFormatFileName, String dataFileLocation)
 			throws Exception
@@ -174,6 +181,7 @@ public class ImportMtlBilling extends AbstractImportSalesJob {
 
 			for (String sheetName : sheetNames)
 			{
+				isPaidSheet = sheetName.toLowerCase().contains("paid") ? true : false;
 				DataHolder sheet = fileDataHolder.get(sheetName);
 
 				List<DataHolder> dataHolderList = sheet.getDataList("dataRecords");

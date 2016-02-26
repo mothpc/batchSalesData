@@ -956,4 +956,19 @@ public class CustomerYesRecord extends BaseAuditDomain {
 		this.campaignName = campaignName;
 	}
 
+	@Override
+	public String toString()
+	{
+		return "CustomerYesRecord [id=" + id + ", importDate=" + importDate + ", referenceNo=" + referenceNo + ", policyNo=" + policyNo + ", customer=" + customer + ", insuredOccupation=" + insuredOccupation + ", insuredBankCode=" + insuredBankCode + ", insuredAccountType=" + insuredAccountType
+				+ ", insuredAccountNo=" + insuredAccountNo + ", insuredAccountExpiredDate=" + insuredAccountExpiredDate + ", insuredAddress1=" + insuredAddress1 + ", insuredAddress2=" + insuredAddress2 + ", insuredAddress3=" + insuredAddress3 + ", insuredAddress4=" + insuredAddress4
+				+ ", insuredSubDistrict=" + insuredSubDistrict + ", insuredDistrict=" + insuredDistrict + ", insuredProvince=" + insuredProvince + ", insuredPostCode=" + insuredPostCode + ", insuredCountry=" + insuredCountry + ", insuredMobileNo=" + insuredMobileNo + ", insuredEmail=" + insuredEmail
+				+ ", spTitle=" + spTitle + ", spFirstName=" + spFirstName + ", spLastName=" + spLastName + ", spNational=" + spNational + ", spCitizenId=" + spCitizenId + ", spPassportId=" + spPassportId + ", spGender=" + spGender + ", spDob=" + spDob + ", spOccupation=" + spOccupation
+				+ ", premium=" + premium + ", benefit=" + benefit + ", billFrequency=" + billFrequency + ", bene1FirstName=" + bene1FirstName + ", bene1LastName=" + bene1LastName + ", bene1Percent=" + bene1Percent + ", bene2FirstName=" + bene2FirstName + ", bene2LastName=" + bene2LastName
+				+ ", bene2Percent=" + bene2Percent + ", bene3FirstName=" + bene3FirstName + ", bene3LastName=" + bene3LastName + ", bene3Percent=" + bene3Percent + ", bene4FirstName=" + bene4FirstName + ", bene4LastName=" + bene4LastName + ", bene4Percent=" + bene4Percent + ", bene5FirstName="
+				+ bene5FirstName + ", bene5LastName=" + bene5LastName + ", bene5Percent=" + bene5Percent + ", effectiveDate=" + effectiveDate + ", payeeName=" + payeeName + ", payeeCitizenId=" + payeeCitizenId + ", payeeBankCode=" + payeeBankCode + ", payeeBranchCode=" + payeeBranchCode
+				+ ", productCode=" + productCode + ", benefitLevel=" + benefitLevel + ", coverCode=" + coverCode + ", sequenceNo=" + sequenceNo + ", bene1Title=" + bene1Title + ", bene1Age=" + bene1Age + ", bene1Relation=" + bene1Relation + ", bene2Title=" + bene2Title + ", bene2Age=" + bene2Age
+				+ ", bene2Relation=" + bene2Relation + ", bene3Title=" + bene3Title + ", bene3Age=" + bene3Age + ", bene3Relation=" + bene3Relation + ", bene4Title=" + bene4Title + ", bene4Age=" + bene4Age + ", bene4Relation=" + bene4Relation + ", bene5Title=" + bene5Title + ", bene5Age=" + bene5Age
+				+ ", bene5Relation=" + bene5Relation + ", optOut=" + optOut + ", campaignName=" + campaignName + ", insuredAnnualIncome=" + insuredAnnualIncome + ", insuredEducationLevel=" + insuredEducationLevel + ", fatca=" + fatca + ", fatcaDetail=" + fatcaDetail + "]";
+	}
+
 }

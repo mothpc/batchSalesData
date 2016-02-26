@@ -156,8 +156,8 @@ public class YesRecordMTLModel implements Serializable {
 		this.address2 = data[8];
 		this.address3 = data[9];
 		this.address4 = data[10];
-		this.homeTel = data[11];
-		this.officeTel = data[12];
+		this.homeTel = StringUtils.isNotBlank(data[11]) ? data[11].replaceAll("-", "") : null;
+		this.officeTel = StringUtils.isNotBlank(data[12]) ? data[12].replaceAll("-", "") : null;
 		this.postCode = data[13];
 		this.idCard = data[14];
 		this.accountNo = data[15];
@@ -172,8 +172,8 @@ public class YesRecordMTLModel implements Serializable {
 		this.campaignCode = data[24];
 		this.tsrCode = data[25];
 		this.xReferenceNo = data[26];
-		this.mobileNo = data[27];
-		this.faxNo = data[28];
+		this.mobileNo = StringUtils.isNotBlank(data[27]) ? data[27].replaceAll("-", "") : null;
+		this.faxNo = StringUtils.isNotBlank(data[28]) ? data[28].replaceAll("-", "") : null;
 		this.email = data[29];
 		this.optOut = data[30];
 		this.policyNo = data[31];

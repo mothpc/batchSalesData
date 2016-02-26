@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileFormat fileName="Mapping MTI KBank" fileType="EXCEL" locale="en-US">
+	<DataSet description="Mapping MTI KBank">
+
+		<DataSheet sheetIndex="0" skipWhenNull="FALSE">
+			<DataRecord listSourceName="approveRecords" beginRow="1" endRow="99999">
+				<BeginRecordCondition column="A" comparator="EQ" checkValue="Approve" firstRowAsData="FALSE" />
+				<DataCell row="1" column="B" dataType="TEXT" autoTrim="TRUE" fieldName="nrefNo" />
+				<DataCell row="1" column="C" dataType="TEXT" autoTrim="TRUE" fieldName="customerName" />
+				<DataCell row="1" column="D" dataType="TEXT" autoTrim="TRUE" fieldName="uniqueId" />
+				<DataCell row="1" column="E" dataType="TEXT" autoTrim="TRUE" fieldName="campaignCode" />
+				<DataCell row="1" column="F" dataType="TEXT" autoTrim="TRUE" fieldName="keyCode" />
+				<DataCell row="1" column="G" dataType="TEXT" autoTrim="TRUE" fieldName="soldPlanCode" />
+				<DataCell row="1" column="H" dataType="TEXT" autoTrim="TRUE" fieldName="kbankCampaignCode" />
+				<DataCell row="1" column="I" dataType="TEXT" autoTrim="TRUE" fieldName="tmrCode" />
+				<DataCell row="1" column="J" dataType="DATE" dataFormat="dd/MM/yyyy HH:mm" fieldName="callDate" />
+				<DataCell row="1" column="K" dataType="TEXT" autoTrim="TRUE" fieldName="callTime" />
+				<DataCell row="1" column="L" dataType="DATE" dataFormat="dd/MM/yyyy HH:mm" fieldName="rejectDate" />
+				<DataCell row="1" column="M" dataType="DATE" dataFormat="dd/MM/yyyy HH:mm" fieldName="batchDate" />
+				<DataCell row="1" column="N" dataType="TEXT" autoTrim="TRUE" fieldName="accountType" />
+				<DataCell row="1" column="O" dataType="TEXT" autoTrim="TRUE" fieldName="cardNo" />
+				<DataCell row="1" column="P" dataType="DATE" dataFormat="dd/MM/yyyy HH:mm" fieldName="dateSendToKbank" />
+				<DataCell row="1" column="Q" dataType="DATE" dataFormat="dd/MM/yyyy HH:mm" fieldName="approveDate" />
+				<EndRecordCondition column="B" comparator="BLANK" />
+			</DataRecord>
+			
+			<DataRecord listSourceName="rejectRecords" beginRow="1" endRow="99999">
+				<BeginRecordCondition column="A" comparator="EQ" checkValue="Reject" firstRowAsData="FALSE" />
+				<DataCell row="1" column="B" dataType="TEXT" autoTrim="TRUE" fieldName="nrefNo" />
+				<DataCell row="1" column="C" dataType="TEXT" autoTrim="TRUE" fieldName="customerName" />
+				<DataCell row="1" column="D" dataType="TEXT" autoTrim="TRUE" fieldName="uniqueId" />
+				<DataCell row="1" column="E" dataType="TEXT" autoTrim="TRUE" fieldName="campaignCode" />
+				<DataCell row="1" column="F" dataType="TEXT" autoTrim="TRUE" fieldName="keyCode" />
+				<DataCell row="1" column="G" dataType="TEXT" autoTrim="TRUE" fieldName="soldPlanCode" />
+				<DataCell row="1" column="H" dataType="TEXT" autoTrim="TRUE" fieldName="kbankCampaignCode" />
+				<DataCell row="1" column="I" dataType="TEXT" autoTrim="TRUE" fieldName="tmrCode" />
+				<DataCell row="1" column="J" dataType="DATE" dataFormat="dd/MM/yyyy HH:mm" fieldName="callDate" />
+				<DataCell row="1" column="K" dataType="TEXT" autoTrim="TRUE" fieldName="callTime" />
+				<DataCell row="1" column="L" dataType="DATE" dataFormat="dd/MM/yyyy HH:mm" fieldName="rejectDate" />
+				<DataCell row="1" column="M" dataType="DATE" dataFormat="dd/MM/yyyy HH:mm" fieldName="batchDate" />
+				<DataCell row="1" column="N" dataType="TEXT" autoTrim="TRUE" fieldName="accountType" />
+				<DataCell row="1" column="O" dataType="TEXT" autoTrim="TRUE" fieldName="cardNo" />
+				<DataCell row="1" column="P" dataType="DATE" dataFormat="dd/MM/yyyy HH:mm" fieldName="dateSendToKbank" />
+				<DataCell row="1" column="Q" dataType="DATE" dataFormat="dd/MM/yyyy HH:mm" fieldName="approveDate" />
+				<EndRecordCondition column="B" comparator="BLANK" />
+			</DataRecord>
+		</DataSheet>
+
+	</DataSet>
+</FileFormat>

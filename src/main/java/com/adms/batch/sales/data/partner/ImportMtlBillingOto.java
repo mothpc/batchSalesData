@@ -24,6 +24,8 @@ import com.adms.utils.PropertyResource;
 
 public class ImportMtlBillingOto extends AbstractImportSalesJob {
 
+	private boolean isPaidSheet;
+	
 	private BillingResult extractRecord(DataHolder dataHolder, BillingResult billingResult)
 			throws Exception
 	{
@@ -49,14 +51,17 @@ public class ImportMtlBillingOto extends AbstractImportSalesJob {
 
 		String remarkString = dataHolder.get("remark").getStringValue();
 		String billingStatusString = null;
-		if (StringUtils.isBlank(remarkString))
-		{
-			billingStatusString = "Paid";
-		}
-		else
-		{
-			billingStatusString = "Reject";
-		}
+
+//		<!-- 23/02/2016 - Change to catch is paid or not by sheet name -->
+		billingStatusString = isPaidSheet ? "Paid" : "Reject";
+//		if (StringUtils.isBlank(remarkString))
+//		{
+//			billingStatusString = "Paid";
+//		}
+//		else
+//		{
+//			billingStatusString = "Reject";
+//		}
 
 		if (StringUtils.isNotBlank(billingStatusString))
 		{
@@ -65,7 +70,10 @@ public class ImportMtlBillingOto extends AbstractImportSalesJob {
 			{
 				throw new Exception("BillingStatus not found for billingStatusString [" + billingStatusString + "]");
 			}
-			billingResult.setBillingStatus(billingStatus);
+			if(billingResult.getBillingStatus() == null
+					|| (billingResult.getBillingStatus() != null && billingResult.getBillingStatus().getBillingStatus().equals("Reject"))) {
+				billingResult.setBillingStatus(billingStatus);
+			}
 		}
 
 		billingResult.setRemark(remarkString);
@@ -186,6 +194,7 @@ public class ImportMtlBillingOto extends AbstractImportSalesJob {
 
 			for (String sheetName : sheetNames)
 			{
+				isPaidSheet = sheetName.toLowerCase().contains("paid") ? true : false;
 				DataHolder sheet = fileDataHolder.get(sheetName);
 
 				List<DataHolder> dataHolderList = sheet.getDataList("dataRecords");

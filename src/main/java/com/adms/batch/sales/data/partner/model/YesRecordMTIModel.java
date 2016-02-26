@@ -285,7 +285,7 @@ public class YesRecordMTIModel {
 	
 	private String bankRefCode;
 	
-	private String bankDefDate;
+	private String bankRefDate;
 	
 	private String piWeight;
 	
@@ -329,21 +329,25 @@ public class YesRecordMTIModel {
 		this.recordType = line.substring(0, 2).trim();
 		this.agencyId = line.substring(2, 4).trim();
 		this.locationCode = line.substring(4, 6).trim();
+		
 		this.campaignNumber = line.substring(7, 19).trim();
 		this.keyCode = line.substring(19, 24).trim();
 		this.fileOwnerCode = line.substring(24, 29).trim();
+		
 		this.accountType = line.substring(46, 47).trim();
 		this.creditCardAccNo = line.substring(47, 63).trim();
-		this.creditCardExpiryDate = line.substring(63, 67);
+		this.creditCardExpiryDate = line.substring(63, 67).trim();
+		
 		this.bankAccNo = line.substring(67, 83).trim();
 		this.bankName = line.substring(84, 88).trim();
 		this.bankCode1 = line.substring(88, 93).trim();
 		this.bankCode2 = line.substring(93, 98).trim();
+		
 		this.primaryInsuredTitile = line.substring(98, 119).trim();
 		this.primaryInsuredFirstName = line.substring(119, 159).trim();
 		this.primaryNameOnCard = line.substring(159, 199).trim();
 		this.primaryInsuredLastName = line.substring(199, 239).trim();
-		this.primaryInsuredDob = StringUtils.isBlank(line.substring(239, 247)) ? null : DateUtil.convStringToDate("ddMMyyyy", line.substring(239, 247).trim());
+		this.primaryInsuredDob = getDateWithPattern("ddMMyyyy", line.substring(239, 247).trim());
 		this.primaryInsuredGender = line.substring(247, 248).trim();
 		this.primaryInsuredOccupationCode = line.substring(248, 251).trim();
 		this.primaryIdCard = line.substring(251, 264).trim();
@@ -351,9 +355,115 @@ public class YesRecordMTIModel {
 		this.primaryMaritalStatus = line.substring(267, 268).trim();
 		this.primaryIncome = line.substring(268, 270).trim();
 		
-	
+		this.piBuildingNo = line.substring(277, 302).trim();
+		this.piBuildingName = line.substring(302, 402).trim();
+		this.piRoomFloor = line.substring(402, 405).trim();
+		
+		this.moo = line.substring(405, 415).trim();
+		this.mooBaan = line.substring(415, 445).trim();
+		this.soi = line.substring(445, 495).trim();
+		this.streetName = line.substring(495, 595).trim();
+		this.subDistrict = line.substring(595, 645).trim();
+		this.district = line.substring(645, 695).trim();
+		this.province = line.substring(695, 720).trim();
+		this.postCode = line.substring(720, 728).trim();
+		
+		this.phoneIndicator = line.substring(738, 739).trim();
+		this.phoneCountryCode = line.substring(739, 742).trim();
+		this.phoneAreaCode = line.substring(742, 745).trim();
+		this.phoneExtNo = line.substring(745, 750).trim();
+		this.phoneNo = line.substring(750, 758).trim();
+		
+		this.phoneIndicatorAlt = line.substring(758, 759).trim();
+		this.phoneCountryCodeAlt = line.substring(759, 762).trim();
+		this.phoneAreaCodeAlt = line.substring(762, 765).trim();
+		this.phoneExtNoAlt = line.substring(765, 770).trim();
+		this.phoneNoAlt = line.substring(770, 779).trim();
+		
+		this.preferredPhoneNoToContact = line.substring(778, 779).trim();
+		
+		this.spouseTitle = line.substring(779, 800).trim();
+		this.spouseFirstName = line.substring(800, 840).trim();
+		this.spouseMidName = line.substring(840, 880).trim();
+		this.spouseLastName = line.substring(880, 920).trim();
+		this.spouseDob = getDateWithPattern("ddMMyyyy", line.substring(920, 928).trim());
+		this.spouseGender = line.substring(928, 929).trim();
+		this.spouseInsuredOccCode = line.substring(929, 932).trim();
+		this.spouseIdCard = line.substring(932, 945).trim();
+		
+		this.dependentTitle1 = line.substring(945, 966).trim();
+		this.dependentFirstName1 = line.substring(966, 1006).trim();
+		this.dependentOccCode1 = line.substring(1006, 1009).trim();
+		this.dependentRelation1 = line.substring(1009, 1010).trim();
+		this.dependentLastName1 = line.substring(1046, 1086).trim();
+		this.dependentDob1 = getDateWithPattern("ddMMyyyy", line.substring(1086, 1094).trim());
+		this.dependentGender1 = line.substring(1094, 1095).trim();
+		this.dependentIdCard1 = line.substring(1095, 1108).trim();
+		
+		this.numOfDependents = line.substring(1760, 1762).trim();
+		
+		this.countryIdentifier = line.substring(1784, 1787).trim();
+		this.productLineCode = line.substring(1787, 1788).trim();
+		
+		this.soldPlanCode = line.substring(1788, 1794).trim();
+		this.soldSequenceNum = line.substring(1794, 1797).trim();
+		this.soldOptionCode = line.substring(1797, 1799).trim();
+		this.soldOptionCategory = line.substring(1799, 1800).trim();
+		this.soldPremium = line.substring(1800, 1814).trim();
+		this.soldBenefitAmt = line.substring(1814, 1828).trim();
+		this.soldBillingMode = line.substring(1828, 1829).trim();
+		this.soldBillingFreq = line.substring(1829, 1830).trim();
+		
+		this.contactFirstName = line.substring(1830, 1870).trim();
+		this.contactLastName = line.substring(1870, 1910).trim();
+		this.contactRelation = line.substring(1910, 1911).trim();
+		
+		this.tmrCode = line.substring(1911, 1915).trim();
+		this.callDate = getDateWithPattern("ddMMyyyy", line.substring(1915, 1923));
+		this.callStartTime = getDateWithPattern("HHmmss", line.substring(1923, 1929));
+		this.calloutCome = line.substring(1929, 1931).trim();
+		
+		this.beneficiaryName1 = line.substring(1931, 2031).trim();
+		this.beneficiaryRelation1 = line.substring(2031, 2032).trim();
+		this.beneficiaryPercent1 = line.substring(2032, 2035).trim();
+		
+		this.beneficiaryName2 = line.substring(2035, 2135).trim();
+		this.beneficiaryRelation2 = line.substring(2135, 2136).trim();
+		this.beneficiaryPercent2 = line.substring(2136, 2139).trim();
+		
+		this.beneficiaryName3 = line.substring(2139, 2239).trim();
+		this.beneficiaryRelation3 = line.substring(2239, 2240).trim();
+		this.beneficiaryPercent3 = line.substring(2240, 2243).trim();
+		
+		this.beneficiaryName4 = line.substring(2243, 2343).trim();
+		this.beneficiaryRelation4 = line.substring(2343, 2344).trim();
+		this.beneficiaryPercent4 = line.substring(2344, 2347).trim();
+		
+		this.beneficiaryName5 = line.substring(2347, 2447).trim();
+		this.beneficiaryRelation5 = line.substring(2447, 2448).trim();
+		this.beneficiaryPercent5 = line.substring(2448, 2451).trim();
+		
+		this.policyNo = line.substring(2596, 2616).trim();
+		this.effectiveDate = getDateWithPattern("ddMMyyyyHHmmss", line.substring(2618, 2626) + line.substring(2626, 2632));
+		
+		this.bankRefCode = line.substring(2634, 2644).trim();
+		this.bankRefDate = line.substring(2644, 2652).trim();
+		
+		this.piWeight = line.substring(2692, 2695).trim();
+		this.piHeight = line.substring(2695, 2698).trim();
+		
+		this.uniqueId = line.substring(3712, 3728).trim();
+		this.kbankCampaignCode = line.substring(3732, 3742).trim();
+		this.policyNumber = line.substring(3742, 3762).trim();
+		
+		this.issueDate = line.substring(3762, 3770).trim();
+		this.policyStatus = line.substring(3770, 3772).trim();
 	}
 
+	private Date getDateWithPattern(String pattern, String dateStr) throws ParseException {
+		return StringUtils.isBlank(dateStr) ? null : DateUtil.convStringToDate(pattern, dateStr.trim());
+	}
+	
 	public String getRecordType()
 	{
 		return recordType;
@@ -1734,14 +1844,14 @@ public class YesRecordMTIModel {
 		this.bankRefCode = bankRefCode;
 	}
 
-	public String getBankDefDate()
+	public String getBankRefDate()
 	{
-		return bankDefDate;
+		return bankRefDate;
 	}
 
-	public void setBankDefDate(String bankDefDate)
+	public void setBankRefDate(String bankDefDate)
 	{
-		this.bankDefDate = bankDefDate;
+		this.bankRefDate = bankDefDate;
 	}
 
 	public String getPiWeight()
@@ -1933,6 +2043,33 @@ public class YesRecordMTIModel {
 	{
 		this.subCode = subCode;
 	}
-	
+
+	@Override
+	public String toString()
+	{
+		return "YesRecordMTIModel [recordType=" + recordType + ", agencyId=" + agencyId + ", locationCode=" + locationCode + ", campaignNumber=" + campaignNumber + ", keyCode=" + keyCode + ", fileOwnerCode=" + fileOwnerCode + ", accountType=" + accountType + ", creditCardAccNo=" + creditCardAccNo
+				+ ", creditCardExpiryDate=" + creditCardExpiryDate + ", bankAccNo=" + bankAccNo + ", bankName=" + bankName + ", bankCode1=" + bankCode1 + ", bankCode2=" + bankCode2 + ", primaryInsuredTitile=" + primaryInsuredTitile + ", primaryInsuredFirstName=" + primaryInsuredFirstName
+				+ ", primaryNameOnCard=" + primaryNameOnCard + ", primaryInsuredLastName=" + primaryInsuredLastName + ", primaryInsuredDob=" + primaryInsuredDob + ", primaryInsuredGender=" + primaryInsuredGender + ", primaryInsuredOccupationCode=" + primaryInsuredOccupationCode + ", primaryIdCard="
+				+ primaryIdCard + ", primaryNameChanged=" + primaryNameChanged + ", primaryMaritalStatus=" + primaryMaritalStatus + ", primaryIncome=" + primaryIncome + ", piBuildingNo=" + piBuildingNo + ", piBuildingName=" + piBuildingName + ", piRoomFloor=" + piRoomFloor + ", moo=" + moo
+				+ ", mooBaan=" + mooBaan + ", soi=" + soi + ", streetName=" + streetName + ", subDistrict=" + subDistrict + ", district=" + district + ", province=" + province + ", postCode=" + postCode + ", areaCode=" + areaCode + ", phoneIndicator=" + phoneIndicator + ", phoneCountryCode="
+				+ phoneCountryCode + ", phoneAreaCode=" + phoneAreaCode + ", phoneExtNo=" + phoneExtNo + ", phoneNo=" + phoneNo + ", phoneIndicatorAlt=" + phoneIndicatorAlt + ", phoneCountryCodeAlt=" + phoneCountryCodeAlt + ", phoneAreaCodeAlt=" + phoneAreaCodeAlt + ", phoneExtNoAlt="
+				+ phoneExtNoAlt + ", phoneNoAlt=" + phoneNoAlt + ", preferredPhoneNoToContact=" + preferredPhoneNoToContact + ", spouseTitle=" + spouseTitle + ", spouseFirstName=" + spouseFirstName + ", spouseMidName=" + spouseMidName + ", spouseLastName=" + spouseLastName + ", spouseDob="
+				+ spouseDob + ", spouseGender=" + spouseGender + ", spouseInsuredOccCode=" + spouseInsuredOccCode + ", spouseIdCard=" + spouseIdCard + ", dependentTitle1=" + dependentTitle1 + ", dependentFirstName1=" + dependentFirstName1 + ", dependentOccCode1=" + dependentOccCode1
+				+ ", dependentRelation1=" + dependentRelation1 + ", dependentLastName1=" + dependentLastName1 + ", dependentDob1=" + dependentDob1 + ", dependentGender1=" + dependentGender1 + ", dependentIdCard1=" + dependentIdCard1 + ", dependentTitle2=" + dependentTitle2 + ", dependentFirstName2="
+				+ dependentFirstName2 + ", dependentOccCode2=" + dependentOccCode2 + ", dependentRelation2=" + dependentRelation2 + ", dependentLastName2=" + dependentLastName2 + ", dependentDob2=" + dependentDob2 + ", dependentGender2=" + dependentGender2 + ", dependentIdCard2=" + dependentIdCard2
+				+ ", dependentTitle3=" + dependentTitle3 + ", dependentFirstName3=" + dependentFirstName3 + ", dependentOccCode3=" + dependentOccCode3 + ", dependentRelation3=" + dependentRelation3 + ", dependentLastName3=" + dependentLastName3 + ", dependentDob3=" + dependentDob3
+				+ ", dependentGender3=" + dependentGender3 + ", dependentIdCard3=" + dependentIdCard3 + ", dependentTitle4=" + dependentTitle4 + ", dependentFirstName4=" + dependentFirstName4 + ", dependentOccCode4=" + dependentOccCode4 + ", dependentRelation4=" + dependentRelation4
+				+ ", dependentLastName4=" + dependentLastName4 + ", dependentDob4=" + dependentDob4 + ", dependentGender4=" + dependentGender4 + ", dependentIdCard4=" + dependentIdCard4 + ", dependentTitle5=" + dependentTitle5 + ", dependentFirstName5=" + dependentFirstName5 + ", dependentOccCode5="
+				+ dependentOccCode5 + ", dependentRelation5=" + dependentRelation5 + ", dependentLastName5=" + dependentLastName5 + ", dependentDob5=" + dependentDob5 + ", dependentGender5=" + dependentGender5 + ", dependentIdCard5=" + dependentIdCard5 + ", numOfDependents=" + numOfDependents
+				+ ", partnerCustomerUniqId=" + partnerCustomerUniqId + ", languagePref=" + languagePref + ", marketCode=" + marketCode + ", countryIdentifier=" + countryIdentifier + ", productLineCode=" + productLineCode + ", soldPlanCode=" + soldPlanCode + ", soldSequenceNum=" + soldSequenceNum
+				+ ", soldOptionCode=" + soldOptionCode + ", soldOptionCategory=" + soldOptionCategory + ", soldPremium=" + soldPremium + ", soldBenefitAmt=" + soldBenefitAmt + ", soldBillingMode=" + soldBillingMode + ", soldBillingFreq=" + soldBillingFreq + ", contactFirstName=" + contactFirstName
+				+ ", contactLastName=" + contactLastName + ", contactRelation=" + contactRelation + ", tmrCode=" + tmrCode + ", callDate=" + callDate + ", callStartTime=" + callStartTime + ", calloutCome=" + calloutCome + ", beneficiaryName1=" + beneficiaryName1 + ", beneficiaryRelation1="
+				+ beneficiaryRelation1 + ", beneficiaryPercent1=" + beneficiaryPercent1 + ", beneficiaryName2=" + beneficiaryName2 + ", beneficiaryRelation2=" + beneficiaryRelation2 + ", beneficiaryPercent2=" + beneficiaryPercent2 + ", beneficiaryName3=" + beneficiaryName3
+				+ ", beneficiaryRelation3=" + beneficiaryRelation3 + ", beneficiaryPercent3=" + beneficiaryPercent3 + ", beneficiaryName4=" + beneficiaryName4 + ", beneficiaryRelation4=" + beneficiaryRelation4 + ", beneficiaryPercent4=" + beneficiaryPercent4 + ", beneficiaryName5="
+				+ beneficiaryName5 + ", beneficiaryRelation5=" + beneficiaryRelation5 + ", beneficiaryPercent5=" + beneficiaryPercent5 + ", policyNo=" + policyNo + ", marketingOffer=" + marketingOffer + ", telephoneSourceCode=" + telephoneSourceCode + ", effectiveDate=" + effectiveDate
+				+ ", effectiveTime=" + effectiveTime + ", rejectedFlag=" + rejectedFlag + ", bankRefCode=" + bankRefCode + ", bankRefDate=" + bankRefDate + ", piWeight=" + piWeight + ", piHeight=" + piHeight + ", uniqueId=" + uniqueId + ", kbankCampaignCode=" + kbankCampaignCode + ", policyNumber="
+				+ policyNumber + ", issueDate=" + issueDate + ", policyStatus=" + policyStatus + ", subOutcome=" + subOutcome + ", insuredOccDesc=" + insuredOccDesc + ", spouseOccDesc=" + spouseOccDesc + ", numberOfPolicy=" + numberOfPolicy + ", summarySumInsured=" + summarySumInsured
+				+ ", spouseNumberOfPolicy=" + spouseNumberOfPolicy + ", spouseSummarySumInsured=" + spouseSummarySumInsured + ", kbankOutcome=" + kbankOutcome + ", kbankSubOutcome=" + kbankSubOutcome + ", kbankContact=" + kbankContact + ", qcCode=" + qcCode + ", subCode=" + subCode + "]";
+	}
 	
 }
